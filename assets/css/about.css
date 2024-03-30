@@ -3,6 +3,10 @@
     --font2: "Quicksand", sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 section {
     background-image: url(../images/Background.png);
     background-position: center;
