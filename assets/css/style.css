@@ -3,10 +3,21 @@
     --font2: "Quicksand", sans-serif;
 }
 
+section {
+    background-image: url(../images/Background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .bg-body-tertiary {
-    background-color: #f5f6f1 !important;
+    background-color: transparent !important;
     margin: 20px;
     border-radius: 32px;
+}
+
+.text-bg-dark {
+    margin: 4%;
 }
 
 .navbar-nav {
@@ -15,6 +26,7 @@
 
 .navbar {
     --bs-navbar-active-color: #b47f39;
+    margin-top: 0;
 }
 
 .nav-item {
@@ -35,7 +47,7 @@
 .card-title {
     font-family: var(--font2);
     font-weight: 700;
-    font-size: calc(2vw + 2vh);
+    font-size: calc(1.8vw + 1.8vh);
     text-transform: uppercase;
     color: black;
 }
@@ -90,9 +102,18 @@ h1 {
 h2 {
     font-family: var(--font1);
     font-weight: 100;
-    text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: white;
+    margin-left: 8%;
+}
+
+h5 {
+    font-family: var(--font1);
+    font-weight: 500;
+    font-size: 60px;
+    color: white;
+    margin-left: 8%;
 }
 
 main{
@@ -103,5 +124,11 @@ main{
 @media only screen and (min-width: 600px){
     .brand-logo {
         width: 250px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .text-bg-dark {
+        margin: 8%;
     }
 }
