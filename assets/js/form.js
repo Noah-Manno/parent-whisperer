@@ -10,8 +10,10 @@ if (userType === "teacher") {
 const emailTypeInput = $('#emailTypeInput');
 const gradingOne = $('#grading-one');
 const attendance = $('#attendance');
+const behaviour = $('#behaviour');
 const gradingTwo = $('#grading-two');
 const gradingThree = $('#grading-three');
+const behaviourTwo = $('#behaviour-two')
 const generate = $('#generate');
 const addAssignment = $('#addAssignment')
 const makeUpWork = $('#make-up-work')
@@ -30,14 +32,32 @@ emailTypeInput.on('input', function() {
             if (inputValue !== "2") {
                 gradingTwo.removeClass('hidden');
                 gradingThree.removeClass('hidden');
+                const generateButtonTwo = $('#gen-email-two');
+
+             generateButtonTwo.on('click', function () {
+                    window.location.href = "index.html"
+                });
             } else {
                 gradingTwo.addClass('hidden')
                 gradingThree.addClass('hidden')
                 generate.removeClass('hidden');
+
+                const generateButtonOne = $('#gen-email');
+
+                generateButtonOne.on('click', function() {
+                    window.location.href = "index.html"
+                });
             }
 
             if (inputValue == "2") {
                 generate.removeClass('hidden');
+
+                const generateButtonOne = $('#gen-email');
+
+                generateButtonOne.on('click', function() {
+                    window.location.href = "index.html"
+                });
+
             } else {
                 generate.addClass('hidden');
             }
@@ -57,19 +77,58 @@ emailTypeInput.on('input', function() {
                 generate.addClass('hidden');
                 gradingTwo.removeClass('hidden');
                 gradingThree.removeClass('hidden');
+
+                const generateButtonTwo = $('#gen-email-two');
+
+             generateButtonTwo.on('click', function () {
+                    window.location.href = "index.html"
+                });
+
             } else {
                 gradingTwo.addClass('hidden');
                 gradingThree.addClass('hidden');
                 generate.removeClass('hidden');
+
+                const generateButtonOne = $('#gen-email');
+
+                generateButtonOne.on('click', function() {
+                    window.location.href = "index.html"
+                });
             }
         });
     } if (inputValue === '3') {
-        gradingOne.addClass('hidden')
-        gradingTwo.addClass('hidden')
-        gradingThree.addClass('hidden')
+        gradingOne.addClass('hidden');
+        gradingTwo.addClass('hidden');
+        gradingThree.addClass('hidden');
         generate.addClass('hidden');
         attendance.addClass('hidden');
-    }
+        behaviour.removeClass('hidden');
+
+        const behaviourSolution = $('#behaviourSolution')
+        behaviourSolution.on('input', function() {
+            let inputValue = behaviourSolution.val();
+
+            if (inputValue == "3") {
+                behaviourTwo.removeClass('hidden');
+                generate.removeClass('hidden');
+
+                const generateButtonOne = $('#gen-email');
+
+                generateButtonOne.on('click', function() {
+                    window.location.href = "index.html"
+                });
+            } else {
+                behaviourTwo.addClass('hidden');
+                generate.removeClass('hidden')
+
+                const generateButtonOne = $('#gen-email');
+
+                generateButtonOne.on('click', function() {
+                    window.location.href = "index.html"
+                });
+            }
+        });
+    } 
 });
 
 addAssignment.on('click', function() {
@@ -81,4 +140,3 @@ addAssignment.on('click', function() {
         missingWork.val('')
     }
 });
-
