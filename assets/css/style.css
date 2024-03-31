@@ -45,6 +45,10 @@ section {
     background-color: transparent;
 }
 
+.card-img {
+    filter: brightness(80%);
+}
+
 .card-title {
     font-family: var(--font2);
     font-weight: 700;
