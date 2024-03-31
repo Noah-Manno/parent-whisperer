@@ -29,7 +29,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -71,7 +71,7 @@
             <option value="3">Behavioural Issue</option>
           </select>
       </div>
-
+<!-- GRADING -->
       <div id="grading-one" class="m-3 col-12 col-sm-6 col-md-4 col-lg-3 hidden">
         <label for="gradeInput" class="form-label">Student's Grade In Class</label>
         <input type="text" class="form-control" id="gradeInput" placeholder="Enter Student Grade...">
@@ -93,11 +93,28 @@
             </select>
       </div>
 
+<!-- ATTENDANCE -->
+
+      <div id="attendance" class="m-3 col-12 col-sm-6 col-md-4 col-lg-3 hidden">
+        <label for="gradeInput" class="form-label">Number of Absences</label>
+        <input type="number" class="form-control" id="absenceInput">
+
+        <label for="attendanceSolution" class="form-label mt-4">What Can the Student Do to Improve This?</label>
+        <select class="form-select" id="attendanceSolution" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Attend An AfterSchool Program</option>
+            <option value="2">Show Up to Class Would Be Enough</option>
+            <option value="3">Make Up Missing Work</option>
+          </select>
+      </div>
+
+<!-- MAKE UP WORK -->
+
       <div id="grading-two" class="m-3 col-12 col-sm-6 col-md-4 col-lg-2 hidden">
         <label for="missingWork" class="form-label mt-4">Enter Make-Up Work</label>
-        <textarea rows="3" id="missingWork"class="form-control" type="text" placeholder="Add Work Here" aria-label="Disabled input example" disabled></textarea>
+        <textarea rows="3" id="missingWork"class="form-control" type="text" placeholder="Add Work Here"></textarea>
         <div class="col-auto">
-            <button type="submit" class="btn mb-3" disabled>Add Assignment</button>
+            <button id="addAssignment"type="submit" class="btn btn-secondary mb-3">Add Assignment</button>
           </div>
       </div>
 
@@ -111,11 +128,15 @@
         </div>
       </div>
 
+<!-- SUBMIT -->
+
       <div id="generate" class="m-3 col-12 col-sm-6 col-md-4 col-lg-2 hidden">
         <div id="generate-button" class="col-auto">
             <button type="submit" class="btn mb-3 btn-primary">Generate Email!</button>
         </div>
       </div>
+
+
 
 </div>
 
