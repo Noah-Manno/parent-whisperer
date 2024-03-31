@@ -7,12 +7,17 @@ body {
     overflow-x: hidden;
 }
 
-section {
+.top {
     background-image: url(../images/Background.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 50vh;
+}
+
+.bottom {
+    min-height: 50vh;
+    background-color: antiquewhite;
 }
 
 .bg-body-tertiary {
@@ -28,6 +33,12 @@ section {
 .navbar {
     --bs-navbar-active-color: #b47f39;
     margin-top: 0;
+}
+
+.text-body-secondary {
+    font-family: var(--font1);
+    font-size: 50px;
+    font-weight: 900;
 }
 
 .nav-item {
@@ -78,11 +89,6 @@ h3 {
     font-family: var(--font1);
     font-weight: 100;
     font-size: 20px;
-}
-
-.about-title {
-    margin-left: 0;
-    text-align: center;
 }
 
 main{

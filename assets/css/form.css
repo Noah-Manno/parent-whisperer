@@ -1,0 +1,168 @@
+:root {
+    --font1: "Roboto Condensed", sans-serif;
+    --font2: "Quicksand", sans-serif;
+}
+
+section {
+    background-image: url(../images/Background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+}
+
+.bg-body-tertiary {
+    background-color: transparent !important;
+    margin: 20px;
+    border-radius: 32px;
+}
+
+.text-bg-dark {
+    margin: 4%;
+}
+
+.navbar-nav {
+    --bs-nav-link-color: #e6b9ad;
+}
+
+.navbar {
+    --bs-navbar-active-color: #b47f39;
+    margin-top: 0;
+}
+
+.nav-item {
+    font-family: var(--font1);
+    font-weight: 100;
+    font-size: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.card {
+    border: 0px;
+    border-radius: 36px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.card-title {
+    font-family: var(--font2);
+    font-weight: 700;
+    font-size: calc(1.8vw + 1.8vh);
+    text-transform: uppercase;
+    color: black;
+}
+.card-title-2 {
+    font-family: var(--font2);
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #e6b9ad;
+}
+
+/* .btn-primary {
+    background-color: #e6b9ad;
+    border: none;
+    font-size: 30px;
+    font-family: var(--font1);
+    font-weight: 100;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} */
+
+.card-text {
+    font-family: var(--font1);
+    font-size: 20px;
+    font-weight: 200;
+    color: black;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card:hover .btn-primary {
+    background-color: #b47f39;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.navbar-toggler {
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: var(--font1);
+    color: #e6b9ad;
+}
+
+.brand-logo {
+    width: 180px;
+    height: auto;
+}
+
+h2 {
+    font-family: var(--font1);
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    margin-left: 8%;
+}
+
+h5 {
+    font-family: var(--font1);
+    font-weight: 500;
+    font-size: 60px;
+    color: white;
+    margin-left: 8%;
+}
+
+.about-title {
+    text-align: center;
+}
+
+main{
+    padding-top: 20px;
+    background-color: whitesmoke;
+    min-height: 50vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+h3 {
+    font-family: var(--font1);
+    font-size: 40px;
+    font-weight: 100;
+}
+h4 {
+    font-family: var(--font1);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 600px){
+    .brand-logo {
+        width: 250px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .text-bg-dark {
+        margin: 8%;
+    }
+}
