@@ -44,7 +44,7 @@ emailTypeInput.on('input', function() {
                     mainLocalStorageSave();
                     gradeLocalStorageSave();
                     assignmentLocalStorageSave();
-                    window.location.href = "index.html"
+                    window.location.href = "email.html"
                 });
             } else {
                 generate.removeClass('hidden');
@@ -54,7 +54,7 @@ emailTypeInput.on('input', function() {
                 generateButtonOne.on('click', function() {
                     mainLocalStorageSave();
                     gradeLocalStorageSave();
-                    window.location.href = "index.html"
+                    window.location.href = "email.html"
                 });
         }
     });
@@ -84,7 +84,7 @@ emailTypeInput.on('input', function() {
                     attendanceLocalStorageSave();
                     assignmentLocalStorageSave();
 
-                    window.location.href = "index.html"
+                    window.location.href = "email.html"
                 });
 
             } else {
@@ -98,7 +98,7 @@ emailTypeInput.on('input', function() {
                     mainLocalStorageSave();
                     attendanceLocalStorageSave();
 
-                    window.location.href = "index.html"
+                    window.location.href = "email.html"
                 });
             }
         });
@@ -124,7 +124,7 @@ emailTypeInput.on('input', function() {
                     mainLocalStorageSave();
                     behaviorLocalStorageSave();
                     meetingTimeLocalStorageSave();
-                    window.location.href = "index.html"
+                    window.location.href = "email.html"
                 });
             } else {
                 behaviorTwo.addClass('hidden');
@@ -135,7 +135,7 @@ emailTypeInput.on('input', function() {
                 generateButtonOne.on('click', function() {
                     mainLocalStorageSave();
                     behaviorLocalStorageSave();
-                    window.location.href = "index.html"
+                    window.location.href = "email.html"
                 });
             }
         });
@@ -154,7 +154,7 @@ addAssignment.on('click', function() {
 });
 
 function mainLocalStorageSave() {
-    let teacherName = $('#teacherNameInput');
+        let teacherName = $('#teacherNameInput');
         let teacherNameInput = teacherName.val();
         
         let studentName = $('#studentNameInput');
