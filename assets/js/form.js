@@ -222,11 +222,11 @@ function attendanceLocalStorageSave() {
     let attendanceSolutionString = ""
 
     if (attendanceSolutionInput == "1") {
-        attendanceSolutionString = "AfterSchool"
+        attendanceSolutionString = "attend our afterschool make-up work program"
     } else if (attendanceSolutionInput == "2") {
-        attendanceSolutionString = "Show Up"
+        attendanceSolutionString = "begin attending my class more often and limit their amount of absences"
     } else if (attendanceSolutionInput == "3") {
-        attendanceSolutionString = "Make Up Work"
+        attendanceSolutionString = "make up their missed work"
     }
 
     localStorage.setItem('absences', absenceInput);
