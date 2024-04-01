@@ -78,7 +78,35 @@
         <br>
           <span class="name-teacher"></span>
         </div>
-        <a id="copy" class="btn btn-primary ms-2 me-auto my-3">Copy To Clipboard <img class="clipboard" src="./assets/images/clipboard copy.png" alt="clipboard"></a>
+        <a id="copy" class="btn btn-primary ms-2 me-auto my-3">Highlight Email to Copy <img class="clipboard" src="./assets/images/clipboard copy.png" alt="clipboard"></a>
+        <a href="form.html" class="btn btn-primary ms-2 me-auto my-3">Write Another Email<br><span class="italics">(This One Will Be Deleted)</span></a>
+      </div>
+
+<!-- ATTENDANCE EMAIL -->
+      <div id="attendance-email" class="card m-3 hidden">
+        <div class="card-header">
+          <h1>Email To: <span class="parent-of">Parent/Guardian Of&nbsp;</span><span class="child-title child-style"></span></h1>
+        </div>
+        <div class="card-body">
+          <span class="card-title">Dear Parent/Guardian of&nbsp;<span class="child-title"></span>,</span>
+          <br><br>
+          <span class="card-text">I hope you are doing well. I am writing to you today to discuss your child's attendance in my class. Unfortunately, they have&nbsp;<span class="numberOfAbsences"></span> absences, and this has effected their performance and their ability to learn the material. I wanted to connect on this matter so that we can form a partnership and work together to help support your student to the best of our ability.</span>
+          <br><br>
+          <span class="card-text">We love having&nbsp;<span class="child-title"></span> in class, so I would love to find a way for them to make up their missed time. If they&nbsp;<span class="attendanceSolution"></span>, they will be right back on track.</span>
+          <br><br>
+          <span id="missingWork"class="missing-work hidden">Here are some assignments they can work on to&nbsp; <span class="grade-solution"> </span>:
+            <ul id="assignment-list">
+            </ul>
+          </span>
+          <span class="card-text">Thank you so much for your time, and I hope we can maintain communication in order to ensure your student is getting the help they need. Please feel free to reach out to me with any questions you have regarding your student's needs.</span>
+        <br><br>
+          <span class="card-text">Thank you,</span>
+        <br>
+          <span class="card-text">Sincerely,</span>
+        <br>
+          <span class="name-teacher"></span>
+        </div>
+        <a id="copy" class="btn btn-primary ms-2 me-auto my-3">Highlight Email to Copy <img class="clipboard" src="./assets/images/clipboard copy.png" alt="clipboard"></a>
         <a href="form.html" class="btn btn-primary ms-2 me-auto my-3">Write Another Email<br><span class="italics">(This One Will Be Deleted)</span></a>
       </div>
 

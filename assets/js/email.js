@@ -16,7 +16,7 @@ if (emailType === "Failing") {
     gradeSolution.text(improve);
 
 
-    if (gradeSolution !== "improve their behavior and avoid distractions") {
+    if (improve !== "improve their behavior and avoid distractions") {
     let missingWork = $('#missingWork')
     missingWork.removeClass('hidden')
     let assignmentList = $('#assignment-list')
@@ -27,7 +27,21 @@ if (emailType === "Failing") {
         assignmentEl.text(assignment);
         assignmentList.append(assignmentEl);
     });
+  } else {
+    let missingWork = $('#missingWork')
+    missingWork.addClass('hidden')
   }
+} else {
+    let failingCard = $('#failing-email');
+    failingCard.addClass('hidden');
+}
+
+if (emailType === "Attendance") {
+    let attendanceCard = $('#attendance-email')
+    attendanceCard.removeClass('hidden')
+} else {
+    let attendanceCard = $('#attendance-email')
+    attendanceCard.addClass('hidden')
 }
 
 let teacherName = localStorage.getItem('teacherName');
