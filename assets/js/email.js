@@ -17,9 +17,9 @@ if (emailType === "Failing") {
 
 
     if (improve !== "improve their behavior and avoid distractions") {
-    let missingWork = $('#missingWork')
+    let missingWork = $('.missing-work')
     missingWork.removeClass('hidden')
-    let assignmentList = $('#assignment-list')
+    let assignmentList = $('.assignment-list')
     let assignmentArray = JSON.parse(localStorage.getItem('assignments'));
 
     assignmentArray.forEach(assignment => {
@@ -28,9 +28,26 @@ if (emailType === "Failing") {
         assignmentList.append(assignmentEl);
     });
   } else {
-    let missingWork = $('#missingWork')
+    let missingWork = $('missing-work')
     missingWork.addClass('hidden')
   }
+
+  function highlightCardBodyText() {
+    const cardBody = document.querySelector('#failing-email .card-body');
+    
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(cardBody);
+    selection.removeAllRanges();
+    selection.addRange(range);
+}
+
+// Call the function to highlight all text in the card body
+let copyEl = $('#copy');
+copyEl.on('click', function() {
+    highlightCardBodyText();
+});
+
 } else {
     let failingCard = $('#failing-email');
     failingCard.addClass('hidden');
@@ -39,6 +56,47 @@ if (emailType === "Failing") {
 if (emailType === "Attendance") {
     let attendanceCard = $('#attendance-email')
     attendanceCard.removeClass('hidden')
+
+    let absences = $('.numberOfAbsences')
+    absencesNumber = JSON.parse(localStorage.getItem('absences'));
+    absences.text(absencesNumber);
+
+    let attendanceSolution = $('.attendanceSolution')
+    let attendanceSolutionInput = localStorage.getItem('attendanceSolution')
+    attendanceSolution.text(attendanceSolutionInput);
+
+    if (attendanceSolutionInput === "make up their missed work") {
+        let missingWork = $('.missing-work')
+        missingWork.removeClass('hidden')
+        let assignmentList = $('.assignment-list')
+        let assignmentArray = JSON.parse(localStorage.getItem('assignments'));
+
+        assignmentArray.forEach(assignment => {
+            let assignmentEl = $('<li>');
+            assignmentEl.text(assignment);
+            assignmentList.append(assignmentEl);
+        }
+    )} else {
+        let missingWork = $('.missing-work')
+        missingWork.addClass('hidden')
+    }
+
+    function highlightCardBodyText() {
+        const cardBody = document.querySelector('#attendance-email .card-body');
+        
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(cardBody);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+    
+    // Call the function to highlight all text in the card body
+    let copyEl = $('#copy2');
+    copyEl.on('click', function() {
+        highlightCardBodyText();
+    });
+    
 } else {
     let attendanceCard = $('#attendance-email')
     attendanceCard.addClass('hidden')
@@ -54,19 +112,5 @@ childTitle.text(studentName);
 
 
 
-function highlightCardBodyText() {
-    const cardBody = document.querySelector('#failing-email .card-body');
-    
-    const selection = window.getSelection();
-    const range = document.createRange();
-    range.selectNodeContents(cardBody);
-    selection.removeAllRanges();
-    selection.addRange(range);
-}
 
-// Call the function to highlight all text in the card body
-let copyEl = $('#copy');
-copyEl.on('click', function() {
-    highlightCardBodyText();
-});
 
