@@ -39,37 +39,20 @@ let childTitle = $('.child-title');
 childTitle.text(studentName);
 
 
-// COPY CONTENT
-document.getElementById('copy').addEventListener('click', function() {
-    let cardBody = document.querySelector('.card-body');
-    let textToCopy = getFormattedText(cardBody);
-    let tempTextArea = document.createElement('textarea');
-    tempTextArea.value = textToCopy;
-    document.body.appendChild(tempTextArea);
-    tempTextArea.select();
-    tempTextArea.setSelectionRange(0, 99999);
-    document.execCommand('copy');
-    document.body.removeChild(tempTextArea);
-    alert('Content copied to clipboard!');
-});
-function getFormattedText(element) {
-    let text = '';
 
-    element.childNodes.forEach(child => {
-        if (child.nodeType === Node.TEXT_NODE) {
-            text += child.textContent.trim(); // Add text content without line breaks
-        } else if (child.nodeType === Node.ELEMENT_NODE) {
-            if (child.tagName === 'BR') {
-                text += '\n'; // Add a single line break for <br> tags
-            } else if (child.tagName === 'P') {
-                text += '\n\n'; // Add double line breaks for <p> elements
-            } else if (child.tagName === 'SPAN' && (child.innerHTML === ' ' || child.innerHTML === '&nbsp;' || child.innerHTML === '&#160;')) {
-                text += ' '; // Add an extra space for non-breaking space character
-            } else {
-                text += getFormattedText(child); // Recursively process child nodes
-            }
-        }
-    });
-
-    return text.trim();
+function highlightCardBodyText() {
+    const cardBody = document.querySelector('#failing-email .card-body');
+    
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(cardBody);
+    selection.removeAllRanges();
+    selection.addRange(range);
 }
+
+// Call the function to highlight all text in the card body
+let copyEl = $('#copy');
+copyEl.on('click', function() {
+    highlightCardBodyText();
+});
+
