@@ -185,22 +185,22 @@ function gradeLocalStorageSave() {
         let reasonInput = reason.val();
         let reasonInputString = ""
         if (reasonInput === "1") {
-            reasonInputString = "Lack Of Effort"
+            reasonInputString = "lack of effort"
         } else if (reasonInput === "2") {
-            reasonInputString = "Distracted In Class"
+            reasonInputString = "consistent distractions"
         } else if (reasonInput === "3") {
-            reasonInputString = "Missing Work"
+            reasonInputString = "missing work"
         }
 
         let improve = $('#improveGrade');
         let improveInput = improve.val();
         let improveInputString = "";
         if (improveInput === "1") {
-            improveInputString = "Complete Missing Work"
+            improveInputString = "complete their missing work"
         } else if (improveInput === "2") {
-            improveInputString = "improve Disposition"
+            improveInputString = "improve their behavior and avoid distractions"
         } else if (improveInput === "3") {
-            improveInputString = "Extra Credit"
+            improveInputString = "complete extra credit work"
         }
 
         localStorage.setItem('grade', gradeInput);

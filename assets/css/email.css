@@ -38,44 +38,6 @@ section {
     padding-right: 50px;
 }
 
-.card {
-    border: 0px;
-    border-radius: 36px;
-    overflow: hidden;
-    background-color: transparent;
-}
-
-.card-title {
-    font-family: var(--font2);
-    font-weight: 700;
-    font-size: calc(1.8vw + 1.8vh);
-    text-transform: uppercase;
-    color: black;
-}
-.card-title-2 {
-    font-family: var(--font2);
-    font-weight: 700;
-    font-size: 30px;
-    text-transform: uppercase;
-    color: #e6b9ad;
-}
-
-.card-text {
-    font-family: var(--font1);
-    font-size: 20px;
-    font-weight: 200;
-    color: black;
-}
-
-.card:hover {
-    cursor: pointer;
-}
-
-.card:hover .btn-primary {
-    background-color: #b47f39;
-    cursor: pointer;
-}
-
 .nav-link:hover {
     color: white;
 }
@@ -84,28 +46,12 @@ section {
     background-color: aliceblue;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 20px;
-    font-family: var(--font1);
-    color: #e6b9ad;
-}
-
 .brand-logo {
     width: 180px;
     height: auto;
 }
 
-h2 {
-    font-family: var(--font1);
-    font-weight: 100;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: white;
-    margin-left: 8%;
-}
-
-h5 {
+.intro {
     font-family: var(--font1);
     font-weight: 100;
     font-size: 40px;
@@ -114,12 +60,11 @@ h5 {
 }
 
 .name {
+    font-family: var(--font1);
+    color: white;
+    margin-left: 8%;
     font-weight: 400;
     font-size: 60px;
-}
-
-.about-title {
-    text-align: center;
 }
 
 main{
@@ -132,20 +77,33 @@ main{
     display: none !important;
 }
 
-h3 {
+h1 {
     font-family: var(--font1);
-    font-size: 40px;
-    font-weight: 100;
-}
-h4 {
-    font-family: var(--font1);
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 200;
+    font-weight: 300;
+    font-size: 35px;
 }
 
-.underline {
-    text-decoration: underline;
+.parent-of {
+    font-size: 25px;
+    font-weight: 100;
+    color: gray;
+}
+
+.child-style {
+    font-size: 25px;
+    font-weight: 100;
+    color: gray;
+}
+
+.italics {
+    font-style: italic;
+    color: beige;
+    font-size: 12px;
+}
+
+.clipboard {
+    width: 20px;
+    height: auto;
 }
 
 @media only screen and (min-width: 600px){
