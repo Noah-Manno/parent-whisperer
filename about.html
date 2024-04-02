@@ -16,37 +16,30 @@
 </head>
 <body>
 <section class="top">
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img class="brand-logo" src="./assets/images/parentwhisperericon.png" alt="parent whisperer">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  My Emails
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Grades</a></li>
-                  <li><a class="dropdown-item" href="#">Attendance</a></li>
-                  <li><a class="dropdown-item" href="#">Discipline</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+   <!-- NAV BAR -->
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="brand-logo" src="./assets/images/parentwhisperericon.png" alt="parent whisperer">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="email.html">Current Email</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
    
       <h5>About Parent Whisperer</h5>
       <h2>Overwhelmed by looming emails home. Use Parent Whisperer to have your email sent in just a few clicks!</h2>
@@ -81,7 +74,7 @@
         <div class="card-body d-flex flex-column">
           <h3 class="card-title">Teachers</h3>
           <p class="card-text about-text">Teachers have so much on their plate. Parent Whisperer was created to help make teacher's lives easier, so they can get back to doing what they do best. Teach!</p>
-          <a href="#" class="mt-auto mx-auto btn btn-primary">Start Emailing!</a>
+          <a id="teacherCard" href="form.html" class="mt-auto mx-auto btn btn-primary">Start Emailing!</a>
         </div>
       </div>
     </div>
@@ -90,7 +83,7 @@
         <div class="card-body d-flex flex-column">
           <h3 class="card-title">Administrators</h3>
           <p class="card-text about-text">Administrators have a building to run. Quickly email parents regarding sensitive matters with the attention to detail it deserves but without the hours having to scrutinize over every word. Our emails are written by expeirenced professionals who can save you the time you need!</p>
-          <a href="#" class="mt-auto mx-auto btn btn-primary">Start Emailing!</a>
+          <a id="adminCard" href="form.html" class="mt-auto mx-auto btn btn-primary">Start Emailing!</a>
         </div>
       </div>
     </div>
@@ -103,12 +96,21 @@
         <div class="card-body">
           <blockquote class="blockquote mb-0">
             <p>A perfect way to save teachers time while still communicating effectively, and professionally with parents.</p>
-            <footer class="blockquote-footer">Dr. Christopher Manno<cite title="Source Title">, 2016 New Jersey Superintendent of the Year</footer>
+            <div class="blockquote-footer">Dr. Christopher Manno<cite title="Source Title">, 2016 New Jersey Superintendent of the Year</div>
           </blockquote>
         </div>
       </div>
     </section>
     
+
+    <footer>
+      <h6>Developed By: Noah Manno</h6>
+      <p class="footer-text">Front-End Web Developer</p>
+      <div>
+      <a href="https://noah-manno.github.io/portfolio-website-v2/" class="portfolio">My Portfolio</a>
+      <img class="arrow" src="./assets/images/gotoportfolioarrow.png" alt="arrow">
+      </div>
+    </footer>
 
 
 
