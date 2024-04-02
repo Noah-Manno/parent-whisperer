@@ -242,11 +242,11 @@ function behaviorLocalStorageSave() {
     let behaviorSolutionString = "";
 
     if (behaviorSolutionInput == "1") {
-        behaviorSolutionString = "apologize"
+        behaviorSolutionString = "they apologize to me and/or the class"
     } else if (behaviorSolutionInput == "2") {
-        behaviorSolutionString = "Improve"
+        behaviorSolutionString = "they remain more cognizant of their actions in the future"
     } else if (behaviorSolutionInput == "3") {
-        behaviorSolutionString = "Phone Call"
+        behaviorSolutionString = "we can schedule a phone call to discuss this further"
     }
 
     localStorage.setItem('behavior', behaviorInput);
