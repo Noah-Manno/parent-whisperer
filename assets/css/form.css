@@ -155,6 +155,42 @@ h4 {
     text-decoration: underline;
 }
 
+footer {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(../images/Background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h6 {
+    font-family: var(--font1);
+    font-size: 20px;
+    color: white;
+}
+
+.footer-text {
+    color: white;
+}
+
+.portfolio {
+    text-decoration: none;
+    color: gray;
+}
+
+.arrow {
+    width: 30px;
+    height: auto;
+}
+
+
+
+
 @media only screen and (min-width: 600px){
     .brand-logo {
         width: 250px;
