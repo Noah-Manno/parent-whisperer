@@ -102,6 +102,54 @@ if (emailType === "Attendance") {
     attendanceCard.addClass('hidden')
 }
 
+if (emailType === "Behavior") {
+    let behaviorCard = $('#behavior-email')
+    behaviorCard.removeClass('hidden')
+
+    let behavior = $('.behavior')
+    let behaviorInput = localStorage.getItem('behavior')
+    behavior.text(behaviorInput);
+
+    let behaviorSolution = $('.behaviorSolution')
+    let behaviorSolutionInput = localStorage.getItem('behaviorSolution')
+    behaviorSolution.text(behaviorSolutionInput);
+
+    if (behaviorSolutionInput === "we can schedule a phone call to discuss this further") {
+        let meetingTimeEl = $('.meetingTimeEl');
+        meetingTimeEl.removeClass('hidden')
+        let date = $('.date');
+        let time = $('.time');
+        let meetingDate = JSON.parse(localStorage.getItem('meetingDate'));
+        let meetingTime = JSON.parse(localStorage.getItem('meetingTime'));
+        let meetingDateFormat = dayjs(meetingDate).format('MMMM D');
+        date.text(meetingDateFormat);
+        time.text(meetingTime);
+    } else {
+        let meetingTimeEl = $('.meetingTimeEl');
+        meetingTimeEl.addClass('hidden')
+    }
+
+    function highlightCardBodyText() {
+        const cardBody = document.querySelector('#behavior-email .card-body');
+        
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(cardBody);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+    
+    // Call the function to highlight all text in the card body
+    let copyEl = $('#copy3');
+    copyEl.on('click', function() {
+        highlightCardBodyText();
+    });
+    
+} else {
+    let behaviorCard = $('#behavior-email')
+    behaviorCard.addClass('hidden')
+}
+
 let teacherName = localStorage.getItem('teacherName');
 let teacherIntroName = $('.name-teacher');
 teacherIntroName.text(teacherName);
