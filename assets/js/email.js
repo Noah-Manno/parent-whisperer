@@ -1,5 +1,14 @@
 const emailType = localStorage.getItem('emailType');
+
+if (emailType == 'null' || 'undefined') {
+    let nullmessage = $('#null-message')
+    nullmessage.removeClass('hidden')
+} 
+
 if (emailType === "Failing") {
+    let nullmessage = $('#null-message')
+    nullmessage.addClass('hidden')
+
     let failingCard = $('#failing-email');
     failingCard.removeClass('hidden');
 
@@ -54,6 +63,9 @@ copyEl.on('click', function() {
 }
 
 if (emailType === "Attendance") {
+    let nullmessage = $('#null-message')
+    nullmessage.addClass('hidden')
+
     let attendanceCard = $('#attendance-email')
     attendanceCard.removeClass('hidden')
 
@@ -103,6 +115,9 @@ if (emailType === "Attendance") {
 }
 
 if (emailType === "Behavior") {
+    let nullmessage = $('#null-message')
+    nullmessage.addClass('hidden')
+
     let behaviorCard = $('#behavior-email')
     behaviorCard.removeClass('hidden')
 

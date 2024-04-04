@@ -139,7 +139,15 @@ h6 {
     height: auto;
 }
 
+#null-message {
+    text-align: center;
+}
 
+.null-message {
+    font-family: var(--font1);
+    font-size: 40px;
+    font-weight: 200;
+}
 
 @media only screen and (min-width: 600px){
     .brand-logo {
